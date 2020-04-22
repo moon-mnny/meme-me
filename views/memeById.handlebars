@@ -1,0 +1,90 @@
+<div class="container-list">
+    <div class="columns is-9">
+        <div class="column is-6">
+            <br />
+            <div id="image-container">
+                <img src="{{meme.image_url}}" alt="" style="display: none;" id="img-src" data-memeid={{meme.id}} />
+                <canvas width="300" height="300" id="canvas"></canvas>
+            </div>
+        </div>
+        <div class="column is-5">
+            <!-- <span>Top Line:</span> -->
+            <br />
+            <input id="topLineText" class="input is-primary" type="text" placeholder="Top Line" /><br />
+            <!-- <span>Bottom Line:</span> -->
+            <br />
+            <input id="bottomLineText" class="input is-primary" type="text" placeholder="Bottom Line" />
+            <br /><br />
+            <!-- <button id="sizeUp">+</button>
+              <button id="sizeDw">-</button> -->
+            <button class="typechoice button is-primary is-outlined p-b-sm" id="impact" value="impact">
+                Impact
+            </button>
+            <button class="typechoice button is-primary is-outlined p-b-sm" id="arial" value="arial">
+                Arial
+            </button>
+            <button class="typechoice button is-primary is-outlined p-b-sm" id="comic" value="comic">
+                Comic Sans
+            </button>
+            <button class="typechoice button is-primary is-outlined p-b-sm" id="cursive" value="cursive">
+                Cursive
+            </button>
+            <button class="typechoice button is-primary is-outlined p-b-sm" id="italic" value="italic">
+                Italic
+            </button>
+            <br /><br>
+            <button class="sizechange button is-success is-outlined p-b-sm" id="plus" value="plus">
+                +
+            </button>
+            <button class="sizechange button is-success is-outlined p-b-sm" id="minus" value="minus">
+                -
+            </button><br /><br>
+            <button id="white" value="white" class="button is-rounded"></button>
+            <button id="black" value="black" class="button is-rounded"></button>
+            <button id="red" value="red" class="button is-rounded"></button>
+            <button id="blue" value="blue" class="button is-rounded"></button>
+            <button id="green" value="green" class="button is-rounded"></button>
+            <br />
+            <br />
+            <a id="downloadBtn" download="meme-me_{{this.id}}.png" href="#" class="button is-link is-outlined">
+                Download your meme
+            </a>
+            <a id="postBtn" href="#" class="button is-danger is-outlined">
+                Post your meme
+            </a>
+        </div>
+    </div>
+    <div class="container-list">
+        <div class="columns  is-multiline ">
+            {{#each comments}}
+            <div class="column is-3">
+                <div class="box">
+                    <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <p>{{this.text}}</p>
+                                <p>Comment By: {{this.user}}</p>
+                            </div>
+                            <div class="content">
+                                <button class="button add-like" data-likebool="1" data-commentid="{{this.id}}">
+                                    <span class="icon">
+                                        <i style="font-size:24px" class="fa">&#xf087;</i>
+                                    </span>
+                                    <span>{{this.likes}} </span>
+                                </button>
+                                <button class="button add-like" data-likebool="0" data-commentid="{{this.id}}">
+                                    <span class="icon">
+                                        <i style="font-size:24px" class="fa">&#xf165;</i>
+                                    </span>
+                                    <span> {{this.dislikes}}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/memeByIdScript.js"></script>

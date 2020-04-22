@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -14,3 +15,96 @@
 </body>
 
 </html>
+=======
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meme-ME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+</head>
+
+<body>
+    <div class="container-shader">
+        <section class="hero gradient">
+            <div class="container-bk-bg">
+                <!-- Hero head: will stick at the top -->
+                <div class="hero-head">
+                    <nav class="navbar">
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="/">
+                                <img src="/img/mememe_tomorrow.gif" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="navbar-end">
+                            <span id="upload-new-meme" class="navbar-item">
+                                <a href="/add-meme" class="button has-text-weight-bold is-primary">
+                                    <span id="upload-button">Upload New Meme</span>
+                                </a>
+                            </span>
+
+                            {{#if user}}
+                            <span class="navbar-item login">
+                                <a href="/logout" id="log-in-or-out" class="button has-text-weight-bold is-secondary">
+                                    <span>Logout</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item login">
+                                <a class="" href="/user/{{user.parsedId}}">
+                                    <img src="{{user.picture}}" class="user-profile-img" alt="{{user.name}}" />
+                                </a>
+                            </span>
+                            {{else}}
+                            <span class="navbar-item">
+                                <a href="/login" id="log-in-or-out" class="button has-text-weight-bold is-primary">
+                                    <span>Login</span>
+                                </a>
+                            </span>
+                            {{/if}}
+
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Hero content: will be in the middle -->
+                <div class="hero-body">
+
+                    <div class="container has-text-centered">
+                        <h1 class="title has-text-primary mark">
+                            <span>M</span><span>a</span><span>k</span><span>e</span>
+                            <span></span><span>Y</span><span>o</span><span>u</span><span>r</span>
+                            <span> </span><span>O</span><span>w</span><span>n</span><span> </span>
+                            <span>M</span><span>e</span><span>m</span><span>e</span>
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <!-- Hero footer: will stick at the bottom -->
+                <div class="hero-foot">
+                    <nav class="tabs">
+                        <div class="container">
+                            <ul>
+                                {{!-- <li><a class="has-text-primary">Popular</a></li>
+                                <li><a class="has-text-primary">N</a></li> --}}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        {{{body}}}
+    </div>
+
+
+</body>
+>>>>>>> 28a7f3022313586a3314837f39e86516a1accd82

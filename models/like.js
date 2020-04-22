@@ -21,7 +21,6 @@ Like.associate = function associate() {
 };
 
 Like.associate();
-
 Like.sync();
 
 module.exports = Like;

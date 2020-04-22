@@ -20,7 +20,6 @@ Comment.associate = function associate() {
 };
 
 Comment.associate();
-
 Comment.sync();
 
 module.exports = Comment;

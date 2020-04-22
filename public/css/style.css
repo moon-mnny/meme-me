@@ -1,0 +1,518 @@
+body {
+  background-color: black;
+  height: 100%;
+}
+a.navbar-item:hover {
+  background-color: transparent;
+}
+.gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.hero-body {
+  padding: 0rem 1.5rem;
+}
+/* .title-text {
+  width: 100%;
+  float: left;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: titleAnimation 3s ease 0.6s infinite forwards;
+ 
+} */
+.title {
+  padding: 2rem;
+  font-size: 4rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+
+h1.title {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 "Squada One", sans-serif;
+  user-select: none;
+}
+
+h1 span {
+  display: inline-block;
+  animation: float 0.2s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: none;
+  }
+  33% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+  66% {
+    transform: translateY(1px) rotate(2deg);
+  }
+}
+
+h1 span:nth-child(n) {
+  color: hsl(159, 86%, 55%);
+  text-shadow: 0px 0px hsl(159, 86%, 55%);
+  -webkit-animation: text-color 3s infinite alternate;
+  -moz-animation: text-color 3s infinite alternate;
+  -ms-animation: text-color 3s infinite alternate;
+  animation: text-color 3s infinite alternate;
+}
+h1:hover span {
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+@keyframes text-color {
+  0% {
+    text-shadow: 0px 0px hsl(23, 75%, 55%);
+  }
+  33% {
+    text-shadow: 0px 0px hsl(319, 73%, 49%);
+  }
+  66% {
+    text-shadow: 0px 0px hsl(191, 76%, 50%);
+  }
+  100% {
+    text-shadow: 0px 0px hsl(159, 86%, 55%);
+  }
+}
+/* h1 span:nth-child(4n-1) {
+  color: hsl(319, 73%, 49%);
+  text-shadow: 0px 0px hsl(319, 73%, 49%);
+}
+h1 span:nth-child(4n-2) {
+  color: hsl(191, 76%, 50%);
+  text-shadow: 0px 0px hsl(191, 76%, 50%);
+}
+h1 span:nth-child(4n-3) {
+  color: hsl(159, 86%, 55%);
+  text-shadow: 0px 0px hsl(159, 86%, 55%);
+} */
+
+h1 span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 0.45s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(12) {
+  animation-delay: 0.55s;
+}
+h1 span:nth-child(13) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(14) {
+  animation-delay: 0.65s;
+}
+h1 span:nth-child(15) {
+  animation-delay: 0.7s;
+}
+h1 span:nth-child(16) {
+  animation-delay: 0.75s;
+}
+h1 span:nth-child(17) {
+  animation-delay: 0.8s;
+}
+h1 span:nth-child(18) {
+  animation-delay: 0.85s;
+}
+
+.container-bk-bg {
+  background-color: rgb(20, 20, 20);
+  margin: 20px 20px;
+  padding: 0 20px;
+}
+.container-list {
+  margin: 0px 20px;
+  padding: 20px 0px;
+}
+.container-shader {
+  min-height: 100vh;
+  background-color: rgb(20, 20, 20);
+  margin-bottom: 0;
+}
+.media-card {
+  margin-top: 20px;
+  padding: 5px;
+  /* background-color: rgba(15, 181, 43, 1) 50%; */
+}
+.card-content {
+  background-color: white;
+}
+
+/* User page style */
+.sub-title {
+  color: #23a6d5;
+  size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.media-content {
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+#profile-img {
+  margin: auto;
+  display: inline-block;
+}
+#user-stat {
+  color: #23a6d5;
+}
+.contentwrap {
+  overflow-wrap: break-word;
+}
+
+.horizontalscroll {
+  overflow: auto;
+}
+.progress.progress-bar::-webkit-progress-value {
+  background: #23a6d5;
+}
+
+.progress.progress-bar::-moz-progress-bar {
+  background: #23a6d5;
+}
+
+.progress.progress-bar::-ms-fill {
+  background: #23a6d5;
+}
+/* Style for Text modification */
+#black {
+  background-color: black;
+}
+#red {
+  background-color: firebrick;
+}
+#green {
+  background-color: green;
+}
+#blue {
+  background-color: blue;
+}
+.is-rounded {
+  margin-left: 5px;
+}
+.sizechange {
+  margin-bottom: 5px;
+}
+.typechoice {
+  margin-bottom: 5px;
+}
+/* Upload Cursor */
+
+#upload_widget {
+  cursor: url("https://res.cloudinary.com/edwardphill/image/upload/v1582251629/meme-me/oqjch8c4kd3ectryrnvm.png"),
+    auto;
+}
+
+/* Profile img styling */
+.user-profile-img {
+  height: 100%;
+  border-radius: 50%;
+}
+.navbar-item img {
+  max-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-item {
+  padding: 0.5rem 0.5rem;
+}
+
+/* Margin and spacing */
+
+.m-none {
+  margin: 0;
+}
+.p-none {
+  padding: 0;
+}
+.m-t-none {
+  margin-top: 0;
+}
+.p-t-none {
+  padding-top: 0;
+}
+.m-r-none {
+  margin-right: 0;
+}
+.p-r-none {
+  padding-right: 0;
+}
+.m-b-none {
+  margin-bottom: 0;
+}
+.p-b-none {
+  padding-bottom: 0;
+}
+.m-l-none {
+  margin-left: 0;
+}
+.p-l-none {
+  padding-left: 0;
+}
+.m-xxs {
+  margin: 0.125rem;
+}
+.p-xxs {
+  padding: 0.125rem;
+}
+.m-t-xxs {
+  margin-top: 0.125rem;
+}
+.p-t-xxs {
+  padding-top: 0.125rem;
+}
+.m-r-xxs {
+  margin-right: 0.125rem;
+}
+.p-r-xxs {
+  padding-right: 0.125rem;
+}
+.m-b-xxs {
+  margin-bottom: 0.125rem;
+}
+.p-b-xxs {
+  padding-bottom: 0.125rem;
+}
+.m-l-xxs {
+  margin-left: 0.125rem;
+}
+.p-l-xxs {
+  padding-left: 0.125rem;
+}
+.m-xs {
+  margin: 0.25rem;
+}
+.p-xs {
+  padding: 0.25rem;
+}
+.m-t-xs {
+  margin-top: 0.25rem;
+}
+.p-t-xs {
+  padding-top: 0.25rem;
+}
+.m-r-xs {
+  margin-right: 0.25rem;
+}
+.p-r-xs {
+  padding-right: 0.25rem;
+}
+.m-b-xs {
+  margin-bottom: 0.25rem;
+}
+.p-b-xs {
+  padding-bottom: 0.25rem;
+}
+.m-l-xs {
+  margin-left: 0.25rem;
+}
+.p-l-xs {
+  padding-left: 0.25rem;
+}
+.m-sm {
+  margin: 0.5rem;
+}
+.p-sm {
+  padding: 0.5rem;
+}
+.m-t-sm {
+  margin-top: 0.5rem;
+}
+.p-t-sm {
+  padding-top: 0.5rem;
+}
+.m-r-sm {
+  margin-right: 0.5rem;
+}
+.p-r-sm {
+  padding-right: 0.5rem;
+}
+.m-b-sm {
+  margin-bottom: 0.5rem;
+}
+.p-b-sm {
+  padding-bottom: 0.5rem;
+}
+.m-l-sm {
+  margin-left: 0.5rem;
+}
+.p-l-sm {
+  padding-left: 0.5rem;
+}
+.m-md {
+  margin: 1rem;
+}
+.p-md {
+  padding: 1rem;
+}
+.m-t-md {
+  margin-top: 1rem;
+}
+.p-t-md {
+  padding-top: 1rem;
+}
+.m-r-md {
+  margin-right: 1rem;
+}
+.p-r-md {
+  padding-right: 1rem;
+}
+.m-b-md {
+  margin-bottom: 1rem;
+}
+.p-b-md {
+  padding-bottom: 1rem;
+}
+.m-l-md {
+  margin-left: 1rem;
+}
+.p-l-md {
+  padding-left: 1rem;
+}
+.m-lg {
+  margin: 2rem;
+}
+.p-lg {
+  padding: 2rem;
+}
+.m-t-lg {
+  margin-top: 2rem;
+}
+.p-t-lg {
+  padding-top: 2rem;
+}
+.m-r-lg {
+  margin-right: 2rem;
+}
+.p-r-lg {
+  padding-right: 2rem;
+}
+.m-b-lg {
+  margin-bottom: 2rem;
+}
+.p-b-lg {
+  padding-bottom: 2rem;
+}
+.m-l-lg {
+  margin-left: 2rem;
+}
+.p-l-lg {
+  padding-left: 2rem;
+}
+.m-xl {
+  margin: 4rem;
+}
+.p-xl {
+  padding: 4rem;
+}
+.m-t-xl {
+  margin-top: 4rem;
+}
+.p-t-xl {
+  padding-top: 4rem;
+}
+.m-r-xl {
+  margin-right: 4rem;
+}
+.p-r-xl {
+  padding-right: 4rem;
+}
+.m-b-xl {
+  margin-bottom: 4rem;
+}
+.p-b-xl {
+  padding-bottom: 4rem;
+}
+.m-l-xl {
+  margin-left: 4rem;
+}
+.p-l-xl {
+  padding-left: 4rem;
+}
+.m-xxl {
+  margin: 8rem;
+}
+.p-xxl {
+  padding: 8rem;
+}
+.m-t-xxl {
+  margin-top: 8rem;
+}
+.p-t-xxl {
+  padding-top: 8rem;
+}
+.m-r-xxl {
+  margin-right: 8rem;
+}
+.p-r-xxl {
+  padding-right: 8rem;
+}
+.m-b-xxl {
+  margin-bottom: 8rem;
+}
+.p-b-xxl {
+  padding-bottom: 8rem;
+}
+.m-l-xxl {
+  margin-left: 8rem;
+}
+.p-l-xxl {
+  padding-left: 8rem;
+}

@@ -1,5 +1,5 @@
 var router = require("express").Router();
-var Like = require("../../models/Like");
+var Like = require("../../models/like");
 
 router.get("/", async (req, res) => {
   const likes = await Like.findAll();
@@ -7,8 +7,21 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const result = await Like.create(req.body);
-  res.json(result);
+  if (req.user) {
+    let userId = req.user.id.split("|")[1];
+    req.body.UserId = userId;
+    const duplicateLikes = await Like.findAll({
+      where: { UserId: userId, CommentId: req.body.CommentId },
+      raw: true
+    });
+    for (let i = 0; i < duplicateLikes.length; i++) {
+      if (duplicateLikes[i].up_or_down == req.body.up_or_down) {
+        return res.status(300);
+      }
+    }
+    const result = await Like.create(req.body);
+    res.json(result);
+  }
 });
 
 router
