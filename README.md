@@ -1,4 +1,4 @@
-<img src ="./public/img/mememe_tomorrow.gif" style="height:40px"/>
+<img src ="./public/img/mememe_tomorrow.gif" height="200"/>
 
 # meme-me
 
@@ -16,9 +16,9 @@ Meme-me is a social Memeing platform where users can upload pictures they think 
 
 ### Samples:
 
-<img src="./meme-demo.gif" /><br/>
-<img src="./public/img/home-screen.png" style="height:150px;" />
-<img src="./public/img/meme-editor.png" style="height:150px;" /> <br/>
+<img src="./meme-demo.gif" width="700" /><br/>
+<img src="./public/img/home-screen.png" width="700" /> <br/>
+<img src="./public/img/meme-editor.png" width="700" /> <br/>
 
 # Technical Overview
 
